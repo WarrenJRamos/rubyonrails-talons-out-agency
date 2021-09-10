@@ -28,8 +28,6 @@ ActiveRecord::Schema.define(version: 2021_04_24_020159) do
     t.integer "client_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "firm_id"
-    t.index ["firm_id"], name: "index_clients_on_firm_id"
   end
 
   create_table "downloads", force: :cascade do |t|
@@ -73,5 +71,4 @@ ActiveRecord::Schema.define(version: 2021_04_24_020159) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "clients", "firms"
 end
